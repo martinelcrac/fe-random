@@ -1,4 +1,5 @@
 --https://www.roblox.com/catalog/5313491692/Mimzy-The-Cat
+--fe kitty pet
 
 --/target
 _G.target = game:GetService("Players").LocalPlayer
