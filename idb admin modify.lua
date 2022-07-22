@@ -1,4 +1,5 @@
----@diagnostic disable: undefined-global, lowercase-global, undefined-field
+---@diagnostic disable: undefined-global, lowercase-global, undefined-field}
+--modify by @martiinsito#00015
 
 repeat wait(1 / 60) until game:IsLoaded()
 if not isfile("DWPrefix.lua") then
