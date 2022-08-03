@@ -109,11 +109,11 @@ local function attachTool(tool,cf)
     end
     local rgrip1 = Instance.new("Weld")
 	rgrip1.Name = "RightGrip"
-	rgrip1.Part0 = getChar()["Right Arm"]
+	rgrip1.Part0 = RightArm
 	rgrip1.Part1 = tool.Handle
 	rgrip1.C0 = cf
 	rgrip1.C1 = tool.Grip
-	rgrip1.Parent = getChar()["Right Arm"]
+	rgrip1.Parent = RightArm
     tool.Parent = getBp()
     tool.Parent = getChar().Humanoid
     tool.Parent = getChar()
@@ -122,11 +122,11 @@ local function attachTool(tool,cf)
     tool.Parent = getChar().Humanoid
     local rgrip2 = Instance.new("Weld")
 	rgrip2.Name = "RightGrip"
-	rgrip2.Part0 = getChar()["Right Arm"]
+	rgrip2.Part0 = RightArm
 	rgrip2.Part1 = tool.Handle
 	rgrip2.C0 = cf
 	rgrip2.C1 = tool.Grip
-	rgrip2.Parent = getChar()["Right Arm"]
+	rgrip2.Parent = RightArm
     return rgrip2
 end
 
@@ -189,8 +189,8 @@ local cc;cc = plr.Chatted:Connect(function(msg)
         firetouchinterest(target.Character.Humanoid.RootPart,tool.Handle,0)
         firetouchinterest(target.Character.Humanoid.RootPart,tool.Handle,0)
     elseif spaceSplit[1] == "/uncontrol" then
-        if getChar()["Right Arm"]:FindFirstChild("RightGrip") then
-            getChar()["Right Arm"]:FindFirstChild("RightGrip"):Destroy()
+        if RightArm:FindFirstChild("RightGrip") then
+            RightArm:FindFirstChild("RightGrip"):Destroy()
             getChar().Humanoid.HipHeight = 0
             workspace.CurrentCamera.CameraSubject = getChar().Humanoid
             getChar().Animate.Disabled = false
