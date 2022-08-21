@@ -6,8 +6,6 @@ local simradius = "shp" --synx,
     --"ssr" - setsimulationradius
     local lp = game:GetService("Players").LocalPlayer
     local rs = game:GetService("RunService")
-    local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
-    local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
     local stepped = rs.Stepped
     local heartbeat = rs.Heartbeat
     local renderstepped = rs.RenderStepped
@@ -48,10 +46,3 @@ local simradius = "shp" --synx,
     	settings().Physics.AllowSleep = false
     	settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.Disabled
     end)
-
-Notification:Notify(
-    {Title = "Simulationradius Checker", Description = "your Simulationradius is "..gethiddenproperty(game.Players.LocalPlayer, "SimulationRadius")},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=4547512139", ImageColor = Color3.fromRGB(255, 84, 84)}
-)
-
