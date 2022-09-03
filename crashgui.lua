@@ -120,7 +120,7 @@ local function TAWYVU_fake_script() -- contador.LocalScript
 			end
 		end
 		
-		script.Parent.Text = tools.." /1280"
+		script.Parent.Text = tools.." /" .._G.tools
 	end
 end
 coroutine.wrap(TAWYVU_fake_script)()
